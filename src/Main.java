@@ -18,14 +18,15 @@ public class Main {
 
 //      Задача 2
         System.out.println("Задача 2");
-        float variable_a = 27.12f;
-        long variable_b = 987_678_965_549L;
-        double variable_c = 2.786;
-        boolean variable_d = false;
-        char variable_e = 569;
-        short variable_f = -159;
-        int variable_g = 27897;
-        byte variable_h = 67;
+        float var_a = 27.12f;
+        long var_b = 987_678_965_549L;
+        double var_c = 2.786;
+        boolean var_d = false;
+        char var_e = 569;
+        short var_f = -159;
+        int var_g = 27897;
+        byte var_h = 67;
+        System.out.println(var_a + ", " + var_b + ", " + var_c + ", " + var_d + ", " + var_e + ", " + var_f + ", " + var_g + ", " + var_h);
         System.out.println();
 
 //      Задача 3
@@ -79,7 +80,8 @@ public class Main {
         int egg = 4;
         int eggWeight = 70;
         int totalWeight = (bananas * bananasWeight) + ((milk * milkWeight100) / 100) + (iceCream * iceCreamWeight) + (egg * eggWeight);
-        float totalWeightKg = totalWeight / 1000f;
+        int gramsPerKg = 1000;
+        float totalWeightKg = (float) totalWeight / gramsPerKg;
         System.out.println("Вес спорт-завтрака составляет " + totalWeightKg + " кг." );
         System.out.println();
 
@@ -88,9 +90,9 @@ public class Main {
         int weightLossKg = 7;
         int minWeightLossPerDayG = 250;
         int maxWeightLossPerDayG = 500;
-        int maxDays = weightLossKg * 1000 / minWeightLossPerDayG;
+        int maxDays = weightLossKg * gramsPerKg / minWeightLossPerDayG;
         System.out.println("Если спортсмен теряет в весе " + minWeightLossPerDayG + " г в сутки, то ему потребуется " + maxDays + " дней, чтобы сбросить " + weightLossKg + " кг.");
-        int minDays = weightLossKg * 1000 / maxWeightLossPerDayG;
+        int minDays = weightLossKg * gramsPerKg / maxWeightLossPerDayG;
         System.out.println("Если спортсмен теряет в весе " + maxWeightLossPerDayG + " г в сутки, то ему потребуется " + minDays + " дней, чтобы сбросить " + weightLossKg + " кг.");
         int averageDays = (maxDays + minDays) / 2;
         System.out.println("В среднем спортсмену понадобится приблизительно " + averageDays + " день, чтобы сбросить " + weightLossKg + " кг.");
@@ -101,22 +103,23 @@ public class Main {
         int salaryMasha = 67760;
         int salaryDenis = 83690;
         int salaryKristina = 76230;
-        float raise = 0.1f;
+        float raise = 10 / 100f;
+        int year = 12;
         float salaryMashaRaise = salaryMasha * raise;
         float newSalaryMasha = salaryMasha + salaryMashaRaise;
-        float yearRaiseMasha = salaryMashaRaise * 12;
-        int newSalaryMashaR = Math.round (newSalaryMasha); // Округление, так как в зарплате не используют дробную часть.
+        float yearRaiseMasha = salaryMashaRaise * year;
+        int newSalaryMashaR = Math.round(newSalaryMasha); // Округление, так как в зарплате не используют дробную часть.
         int yearRaiseMashaR = Math.round(yearRaiseMasha);
         System.out.println("Маша будет получать " + newSalaryMashaR + " рублей в месяц. Годовой доход вырастет на " + yearRaiseMashaR + " рублей.");
         float salaryDenisRaise = salaryDenis * raise;
         float newSalaryDenis = salaryDenis + salaryDenisRaise;
-        float yearRaiseDenis = salaryDenisRaise * 12;
-        int newSalaryDenisR = Math.round (newSalaryDenis); // Округление, так как в зарплате не используют дробную часть.
+        float yearRaiseDenis = salaryDenisRaise * year;
+        int newSalaryDenisR = Math.round(newSalaryDenis); // Округление, так как в зарплате не используют дробную часть.
         int yearRaiseDenisR = Math.round(yearRaiseDenis);
         System.out.println("Маша будет получать " + newSalaryDenisR + " рублей в месяц. Годовой доход вырастет на " + yearRaiseDenisR + " рублей.");
         float salaryKristinaRaise = salaryKristina * raise;
         float newSalaryKristina = salaryKristina + salaryKristinaRaise;
-        float yearRaiseKristina= salaryKristinaRaise * 12;
+        float yearRaiseKristina= salaryKristinaRaise * year;
         int newSalaryKristinaR = Math.round(newSalaryKristina); // Округление, так как в зарплате не используют дробную часть.
         int yearRaiseKristinaR = Math.round(yearRaiseKristina);
         System.out.println("Маша будет получать " + newSalaryKristinaR + " рублей в месяц. Годовой доход вырастет на " + yearRaiseKristinaR + " рублей.");
