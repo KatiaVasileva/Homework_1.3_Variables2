@@ -1,5 +1,140 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+//      Задача 1
+        System.out.println("Задача 1");
+        int city = 516;
+        System.out.println("Значение переменной city с типом int равно " + city + ".");
+        byte village = 103;
+        System.out.println("Значение переменной village с типом byte равно " + village + ".");
+        short town = 215;
+        System.out.println("Значение переменной town с типом short равно " + town + ".");
+        long country = 144_000_000L;
+        System.out.println("Значение переменной country с типом long равно " + country + ".");
+        float men = 26.89f;
+        System.out.println("Значение переменной men с типом float равно " + men + ".");
+        double women = 29.97;
+        System.out.println("Значение переменной women с типом double равно " + women + ".");
+        System.out.println();
+
+//      Задача 2
+        System.out.println("Задача 2");
+        float var_a = 27.12f;
+        long var_b = 987_678_965_549L;
+        double var_c = 2.786;
+        boolean var_d = false;
+        char var_e = 569;
+        short var_f = -159;
+        int var_g = 27897;
+        byte var_h = 67;
+        System.out.println(var_a + ", " + var_b + ", " + var_c + ", " + var_d + ", " + var_e + ", " + var_f + ", " + var_g + ", " + var_h);
+        System.out.println();
+
+//      Задача 3
+        System.out.println("Задача 3");
+        int studentsInLudmilaClass = 23;
+        int studentsInAnnaClass = 27;
+        int studentsInEkaterinaClass = 30;
+        int totalPaper = 480;
+        int paperPerStudent = totalPaper / (studentsInLudmilaClass + studentsInAnnaClass + studentsInEkaterinaClass);
+        System.out.println("На каждого ученика рассчитано " + paperPerStudent + " листов бумаги.");
+        System.out.println();
+
+//      Задача 4
+        System.out.println("Задача 4");
+        int bottles = 16;
+        int minutes = 2;
+        int machineCapacityPerMinute = bottles / minutes;
+        int period1 = 20;
+        int machineCapacityPeriod1 = machineCapacityPerMinute * period1;
+        System.out.println("За 20 минут машина произвела бутылок " + machineCapacityPeriod1 + " штук.");
+        int period2 = 24 * 60;
+        int machineCapacityPeriod2 = machineCapacityPerMinute * period2;
+        System.out.println("За сутки машина произвела бутылок " + machineCapacityPeriod2 + " штук.");
+        int period3 = 3 * period2;
+        int machineCapacityPeriod3 = machineCapacityPerMinute * period3;
+        System.out.println("За 3 дня машина произвела бутылок " + machineCapacityPeriod3 + " штук.");
+        int period4 = 30 * period2;
+        int machineCapacityPeriod4 = machineCapacityPerMinute * period4;
+        System.out.println("За 1 месяц машина произвела бутылок " + machineCapacityPeriod4 + " штук.");
+        System.out.println();
+
+//      Задача 5
+        System.out.println("Задача 5");
+        int totalPaint = 120;
+        int whitePaintPerClass = 2;
+        int brownPaintPerClass = 4;
+        int classNumber = totalPaint / (whitePaintPerClass + brownPaintPerClass);
+        int totalWhitePaint = classNumber * whitePaintPerClass;
+        int totalBrownPaint = classNumber * brownPaintPerClass;
+        System.out.println("В школе, где " + classNumber + " классов, нужно " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски.");
+        System.out.println();
+
+//      Задача 6
+        System.out.println("Задача 6");
+        int bananas = 5;
+        int bananasWeight = 80;
+        int milk = 200;
+        int milkWeight100 = 105;
+        int iceCream = 2;
+        int iceCreamWeight = 100;
+        int egg = 4;
+        int eggWeight = 70;
+        int totalWeight = (bananas * bananasWeight) + ((milk * milkWeight100) / 100) + (iceCream * iceCreamWeight) + (egg * eggWeight);
+        int gramsPerKg = 1000;
+        float totalWeightKg = (float) totalWeight / gramsPerKg;
+        System.out.println("Вес спорт-завтрака составляет " + totalWeightKg + " кг." );
+        System.out.println();
+
+//      Задача 7
+        System.out.println("Задача 7");
+        int weightLossKg = 7;
+        int minWeightLossPerDayG = 250;
+        int maxWeightLossPerDayG = 500;
+        int maxDays = weightLossKg * gramsPerKg / minWeightLossPerDayG;
+        System.out.println("Если спортсмен теряет в весе " + minWeightLossPerDayG + " г в сутки, то ему потребуется " + maxDays + " дней, чтобы сбросить " + weightLossKg + " кг.");
+        int minDays = weightLossKg * gramsPerKg / maxWeightLossPerDayG;
+        System.out.println("Если спортсмен теряет в весе " + maxWeightLossPerDayG + " г в сутки, то ему потребуется " + minDays + " дней, чтобы сбросить " + weightLossKg + " кг.");
+        int averageDays = (maxDays + minDays) / 2;
+        System.out.println("В среднем спортсмену понадобится приблизительно " + averageDays + " день, чтобы сбросить " + weightLossKg + " кг.");
+        System.out.println();
+
+//      Задача 8
+        System.out.println("Задача 8");
+        int salaryMasha = 67760;
+        int salaryDenis = 83690;
+        int salaryKristina = 76230;
+        float raise = 10;
+        int period = 12;
+        float salaryMashaRaise = salaryMasha * (raise / 100f);
+        float newSalaryMasha = salaryMasha + salaryMashaRaise;
+        float totalRaiseMasha = salaryMashaRaise * period;
+        System.out.println("При повышении зарплаты на " + (int) raise + " процентов Маша будет получать " + (int) newSalaryMasha + " рублей в месяц. Доход за " + period + " месяцев вырастет на " + (int) totalRaiseMasha + " рублей.");
+        float salaryDenisRaise = salaryDenis * (raise / 100f);
+        float newSalaryDenis = salaryDenis + salaryDenisRaise;
+        float totalRaiseDenis = salaryDenisRaise * period;
+        System.out.println("При повышении зарплаты на " + (int) raise + " процентов Денис будет получать " + (int) newSalaryDenis + " рублей в месяц. Доход за " + period + " месяцев вырастет на " + (int) totalRaiseDenis + " рублей.");
+        float salaryKristinaRaise = salaryKristina * (raise / 100f);
+        float newSalaryKristina = salaryKristina + salaryKristinaRaise;
+        float totalRaiseKristina= salaryKristinaRaise * period;
+        System.out.println("При повышении зарплаты на " + (int) raise + " процентов Кристина будет получать " + (int) newSalaryKristina + " рублей в месяц. Доход за " + period + " месяцев вырастет на " + (int) totalRaiseKristina + " рублей.");
+        System.out.println();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
