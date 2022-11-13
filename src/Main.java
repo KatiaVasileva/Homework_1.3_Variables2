@@ -103,26 +103,20 @@ public class Main {
         int salaryMasha = 67760;
         int salaryDenis = 83690;
         int salaryKristina = 76230;
-        float raise = 10 / 100f;
-        int year = 12;
-        float salaryMashaRaise = salaryMasha * raise;
+        float raise = 10;
+        int period = 12;
+        float salaryMashaRaise = salaryMasha * (raise / 100f);
         float newSalaryMasha = salaryMasha + salaryMashaRaise;
-        float yearRaiseMasha = salaryMashaRaise * year;
-        int newSalaryMashaR = Math.round(newSalaryMasha); // Округление, так как в зарплате не используют дробную часть.
-        int yearRaiseMashaR = Math.round(yearRaiseMasha);
-        System.out.println("Маша будет получать " + newSalaryMashaR + " рублей в месяц. Годовой доход вырастет на " + yearRaiseMashaR + " рублей.");
-        float salaryDenisRaise = salaryDenis * raise;
+        float totalRaiseMasha = salaryMashaRaise * period;
+        System.out.println("При повышении зарплаты на " + (int) raise + " процентов Маша будет получать " + (int) newSalaryMasha + " рублей в месяц. Доход за " + period + " месяцев вырастет на " + (int) totalRaiseMasha + " рублей.");
+        float salaryDenisRaise = salaryDenis * (raise / 100f);
         float newSalaryDenis = salaryDenis + salaryDenisRaise;
-        float yearRaiseDenis = salaryDenisRaise * year;
-        int newSalaryDenisR = Math.round(newSalaryDenis); // Округление, так как в зарплате не используют дробную часть.
-        int yearRaiseDenisR = Math.round(yearRaiseDenis);
-        System.out.println("Маша будет получать " + newSalaryDenisR + " рублей в месяц. Годовой доход вырастет на " + yearRaiseDenisR + " рублей.");
-        float salaryKristinaRaise = salaryKristina * raise;
+        float totalRaiseDenis = salaryDenisRaise * period;
+        System.out.println("При повышении зарплаты на " + (int) raise + " процентов Денис будет получать " + (int) newSalaryDenis + " рублей в месяц. Доход за " + period + " месяцев вырастет на " + (int) totalRaiseDenis + " рублей.");
+        float salaryKristinaRaise = salaryKristina * (raise / 100f);
         float newSalaryKristina = salaryKristina + salaryKristinaRaise;
-        float yearRaiseKristina= salaryKristinaRaise * year;
-        int newSalaryKristinaR = Math.round(newSalaryKristina); // Округление, так как в зарплате не используют дробную часть.
-        int yearRaiseKristinaR = Math.round(yearRaiseKristina);
-        System.out.println("Маша будет получать " + newSalaryKristinaR + " рублей в месяц. Годовой доход вырастет на " + yearRaiseKristinaR + " рублей.");
+        float totalRaiseKristina= salaryKristinaRaise * period;
+        System.out.println("При повышении зарплаты на " + (int) raise + " процентов Кристина будет получать " + (int) newSalaryKristina + " рублей в месяц. Доход за " + period + " месяцев вырастет на " + (int) totalRaiseKristina + " рублей.");
         System.out.println();
 
 
